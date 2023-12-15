@@ -1,0 +1,15 @@
+<div class="container-fluid my-3">
+  <div class="row gx-3">
+    <ng-container *ngFor="let menu of menus">
+      <div class="col-lg-4 mt-3">
+        <div class="border rounded-3 p-3 bg-light">
+          <img [src]="menu.src" class="w-100" alt="Sample Image" />
+          <h2 class="text-dark text-center">{{ menu.name }}</h2>
+          <div class="text-center mt-3">
+          <a class="btn btn-info" [routerLink]="['/',menu.name.toLowerCase()]">{{ menu.name }}</a>
+        </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
