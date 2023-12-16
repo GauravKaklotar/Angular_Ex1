@@ -1,1 +1,32 @@
-<p>cities works!</p>
+<div class="container my-3 bg-light">
+    <p class="display-3 text-center mb-4">Cities</p>
+    <div class="table-responsive">
+      <table class="table table-hover p-3 my-2">
+        <thead class="table-primary">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Population</th>
+            <th>Area_sq_km</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let city of allCity">
+            <td>{{ city.id }}</td>
+            <td>{{ city.name }}</td>
+            <td>{{ city.country }}</td>
+            <td>{{ city.population }}</td>
+            <td>{{ city.area_sq_km }}</td>
+            <td>{{ city.latitude }}</td>
+            <td>{{ city.longitude }}</td>
+            <td><a class="btn btn-info" [routerLink]="['/cities', city.id]">Details</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

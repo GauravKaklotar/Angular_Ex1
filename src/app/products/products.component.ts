@@ -12,7 +12,7 @@ export class ProductsComponent {
   allProducts!: IProduct[];
   product!: IProduct;
 
-  constructor(public productService: ProductService){
+  constructor(private productService: ProductService){
     this.productService.getAllProducts().then((productList: IProduct[]) => {
       this.allProducts = productList;
       console.log(this.allProducts);
