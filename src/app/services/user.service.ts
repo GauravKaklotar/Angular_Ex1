@@ -15,7 +15,7 @@ export class UserService {
     return await data.json() ?? [];
   }
 
-  async getUser(id: number): Promise<IUser> {
+  async getUserById(id: number): Promise<IUser> {
     const data = await fetch(`${this.url}/${id}`);
     return await data.json()?? {};
   }

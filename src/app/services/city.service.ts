@@ -15,7 +15,7 @@ export class CityService {
     return await data.json() ?? [];
   }
 
-  async getCity(id: number): Promise<ICity> {
+  async getCityById(id: number): Promise<ICity> {
     const data = await fetch(`${this.url}/${id}`);
     return await data.json()?? {};
   }
