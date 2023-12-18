@@ -13,13 +13,13 @@
           <th>#</th>
           <th>Name</th>
           <th>Category</th>
-          <th>Price</th>
+          <th>Price <input type="number" class="mx-2" [(ngModel)] = "price" placeholder="Enter Price"></th>
           <th>Stock</th>
           <th>Manufacturer</th>
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody appHighlight [searchPrice] = "this.price">
         <tr *ngFor="let product of allProducts" appTooltip [tooltipData]="{ type: 'description', description: product.description}">
           <td>{{ product.id }}</td>
           <td>{{ product.name }}</td>
