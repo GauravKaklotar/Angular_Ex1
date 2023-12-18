@@ -11,6 +11,8 @@ export class ProductsComponent {
 
   allProducts!: IProduct[];
   product!: IProduct;
+  
+  price!:number;
 
   // filterdproducts!: IProduct[];
 
