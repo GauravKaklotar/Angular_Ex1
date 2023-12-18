@@ -12,6 +12,8 @@ import { CitiesComponent } from './cities/cities.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { UserDetailsComponent } from './users/user-details/user-details.component';
 import { CityDetailsComponent } from './cities/city-details/city-details.component';
+import { FormsModule } from '@angular/forms';
+import { TooltipDirective } from './directives/tooltip.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +25,13 @@ import { CityDetailsComponent } from './cities/city-details/city-details.compone
     CitiesComponent,
     ProductDetailsComponent,
     UserDetailsComponent,
-    CityDetailsComponent
+    CityDetailsComponent,
+    TooltipDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,55 @@
-<p>user-details works!</p>
+<div class="container bg-light my-5 p-2">
+    <form class="row g-3" (ngSubmit)="OnSubmit()" #myForm="ngForm">
+      <div class="col-md-6">
+        <label for="uId" calss="form-label">User Id</label>
+        <input type="number" class="form-control" id="uId" name="id" ngModel #pId="ngModel" required
+          #erroruId="ngModel">
+        <div>
+          <small *ngIf="erroruId.invalid  &&  erroruId.touched" class="text-danger">*User Id is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="uName" calss="form-label">Name</label>
+        <input type="text" class="form-control" id="uName" name="username" ngModel #uName="ngModel" required
+          #erroruName="ngModel">
+        <div>
+          <small *ngIf="erroruName.invalid  &&  erroruName.touched" class="text-danger">*Username is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="uEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="uEmail" name="email" ngModel #uEmail="ngModel" email required
+            #erroruEmail="ngModel">
+        <div>
+            <small *ngIf="erroruEmail.invalid && erroruEmail.touched" class="text-danger">*Email is Required</small>
+        </div>
+    </div>
+      <div class="col-md-6">
+        <label for="uAge" calss="form-label">Age</label>
+        <input type="number" class="form-control" id="uAge" name="age" ngModel #uAge="ngModel" required
+          #erroruAge="ngModel">
+        <div>
+          <small *ngIf="erroruAge.invalid  &&  erroruAge.touched" class="text-danger">*Age is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="uPhone" calss="form-label">Phone</label>
+        <input type="text" class="form-control" id="uPhone" name="phone" ngModel #uPhone="ngModel" required
+          #erroruPhone="ngModel">
+        <div>
+          <small *ngIf="erroruPhone.invalid  &&  erroruPhone.touched" class="text-danger">*Phone is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="uAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="uAddress" name="address" ngModel #uAddress="ngModel" required
+          #erroruAddress="ngModel">
+        <div>
+          <small *ngIf="erroruAddress.invalid && erroruAddress.touched" class="text-danger">*Address is Required</small>
+        </div>
+    </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>

@@ -1,1 +1,63 @@
-<p>product-details works!</p>
+<div class="container bg-light my-5 p-2">
+    <form class="row g-3" (ngSubmit)="OnSubmit()" #myForm="ngForm">
+      <div class="col-md-6">
+        <label for="pId" calss="form-label">Product Id</label>
+        <input type="number" class="form-control" id="pId" name="id" ngModel #pId="ngModel" required
+          #errorpId="ngModel">
+        <div>
+          <small *ngIf="errorpId.invalid  &&  errorpId.touched" class="text-danger">*Product Id is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="pName" calss="form-label">Name</label>
+        <input type="text" class="form-control" id="pName" name="name" ngModel #pName="ngModel" required
+          #errorpName="ngModel">
+        <div>
+          <small *ngIf="errorpName.invalid  &&  errorpName.touched" class="text-danger">*Product Name is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="pCategory" calss="form-label">Category</label>
+        <input type="text" class="form-control" id="pCategory" name="category" ngModel #countrys="ngModel" required
+          #errorpCategory="ngModel">
+        <div>
+          <small *ngIf="errorpCategory.invalid  &&  errorpCategory.touched" class="text-danger">*Category Name is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="pPrice" calss="form-label">Price</label>
+        <input type="number" class="form-control" id="pPrice" name="price" ngModel #pPrice="ngModel" required
+          #errorpPrice="ngModel">
+        <div>
+          <small *ngIf="errorpPrice.invalid  &&  errorpPrice.touched" class="text-danger">*Price is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="pStock" calss="form-label">Stock</label>
+        <input type="number" class="form-control" id="pStock" name="stock" ngModel #pStock="ngModel" required
+          #errorpStock="ngModel">
+        <div>
+          <small *ngIf="errorpStock.invalid  &&  errorpStock.touched" class="text-danger">*Stock is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="pManufacturer" calss="form-label">Manufacturer</label>
+        <input type="text" class="form-control" id="pManufacturer" name="manufacturer" ngModel #pManufacturer="ngModel" required
+          #errorpManufacturer="ngModel">
+        <div>
+          <small *ngIf="errorpManufacturer.invalid  &&  errorpManufacturer.touched" class="text-danger">*Manufacturer name is Required</small>
+        </div>
+      </div>
+      <div class="col">
+        <label for="pDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="pDescription" name="description" ngModel #pDescription="ngModel" required
+          #errorpDescription="ngModel">
+        <div>
+          <small *ngIf="errorpDescription.invalid && errorpDescription.touched" class="text-danger">*Description is Required</small>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>

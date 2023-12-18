@@ -12,10 +12,28 @@ export class ProductsComponent {
   allProducts!: IProduct[];
   product!: IProduct;
 
+  // filterdproducts!: IProduct[];
+
+  // searchText!: string;
+
   constructor(private productService: ProductService){
     this.productService.getAllProducts().then((productList: IProduct[]) => {
       this.allProducts = productList;
+      // this.filterdproducts = productList;
       console.log(this.allProducts);
     });
   }
+
+  //  filteredProducts() {
+  //   const searchLower = this.searchText.toLowerCase().trim();
+  //   this.filterdproducts = this.allProducts.filter(product =>
+  //     product.category.toLowerCase().includes(searchLower) ||
+  //     product.manufacturer.toLowerCase().includes(searchLower)
+  //   );
+  // }
+
+  // ngDoCheck()
+  // {
+  //   console.log(this.searchText);
+  // }
 }

@@ -8,18 +8,16 @@
             <th>Username</th>
             <th>Email</th>
             <th>Age</th>
-            <th>Address</th>
             <th>Phone</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of allUsers">
+          <tr *ngFor="let user of allUsers" appTooltip [tooltipData]="{type : 'address', address: user.address}">
             <td>{{ user.id }}</td>
             <td>{{ user.username }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.age }}</td>
-            <td>{{ user.address }}</td>
             <td>{{ user.phone }}</td>
             <td><a class="btn btn-info" [routerLink]="['/user', user.id]">Details</a></td>
           </tr>

@@ -1,1 +1,62 @@
-<p>city-details works!</p>
+<div class="container bg-light my-5 p-2">
+    <form class="row g-3" (ngSubmit)="OnSubmit()" #myForm="ngForm">
+      <div class="col-md-6">
+        <label for="cId" calss="form-label">City Id</label>
+        <input type="number" class="form-control" id="cId" name="id" ngModel #cId="ngModel" required
+          #errorcId="ngModel">
+        <div>
+          <small *ngIf="errorcId.invalid  &&  errorcId.touched" class="text-danger">*City Id is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cName" calss="form-label">Name</label>
+        <input type="text" class="form-control" id="cName" name="name" ngModel #cName="ngModel" required
+          #errorcName="ngModel">
+        <div>
+          <small *ngIf="errorcName.invalid  &&  errorcName.touched" class="text-danger">*City Name is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cCountry" calss="form-label">Country</label>
+        <input type="text" class="form-control" id="pCategory" name="country" ngModel #cCountry="ngModel" required
+          #errorcCountry="ngModel">
+        <div>
+          <small *ngIf="errorcCountry.invalid  &&  errorcCountry.touched" class="text-danger">*Country Name is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cPopulation" calss="form-label">Population</label>
+        <input type="number" class="form-control" id="cPopulation" name="population" ngModel #cPopulation="ngModel" required
+          #errorcPopulation="ngModel">
+        <div>
+          <small *ngIf="errorcPopulation.invalid  &&  errorcPopulation.touched" class="text-danger">*Population is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cArea" calss="form-label">Area Sq Km</label>
+        <input type="number" class="form-control" id="cArea" name="area_sq_km" ngModel #pStock="ngModel" required
+          #errorcArea="ngModel">
+        <div>
+          <small *ngIf="errorcArea.invalid  &&  errorcArea.touched" class="text-danger">*Area is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cLatitude" calss="form-label">Latitude</label>
+        <input type="number" class="form-control" id="cLatitude" name="latitude" ngModel #pManufacturer="ngModel" required
+          #errorcLatitude="ngModel">
+        <div>
+          <small *ngIf="errorcLatitude.invalid  &&  errorcLatitude.touched" class="text-danger">*Latitude is Required</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cLongitude" class="form-label">Longitude</label>
+        <input type="number" class="form-control" id="cLongitude" name="longitude" ngModel #cLongitude="ngModel" required #errorcLongitude="ngModel">
+        <div>
+          <small *ngIf="errorcLongitude.invalid && errorcLongitude.touched" class="text-danger">*Longitude is Required</small>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>

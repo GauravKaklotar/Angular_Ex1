@@ -9,20 +9,16 @@
             <th>Country</th>
             <th>Population</th>
             <th>Area_sq_km</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let city of allCity">
+          <tr *ngFor="let city of allCity" appTooltip [tooltipData]="{type : 'coordinates', latitude: city.latitude, longitude: city.longitude}">
             <td>{{ city.id }}</td>
             <td>{{ city.name }}</td>
             <td>{{ city.country }}</td>
             <td>{{ city.population }}</td>
             <td>{{ city.area_sq_km }}</td>
-            <td>{{ city.latitude }}</td>
-            <td>{{ city.longitude }}</td>
             <td><a class="btn btn-info" [routerLink]="['/city', city.id]">Details</a></td>
           </tr>
         </tbody>

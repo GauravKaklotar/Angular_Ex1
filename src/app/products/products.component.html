@@ -1,5 +1,11 @@
 <div class="container my-3 bg-light">
   <p class="display-3 text-center mb-4">Products</p>
+  <!-- <form class="d-flex ms-auto col-lg-4 mb-4">
+    <div class="input-group">
+        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Search by category or manufacturer">
+        <button type="button" class="btn btn-secondary"><i class="bi-search"></i></button>
+    </div>
+</form> -->
   <div class="table-responsive">
     <table class="table table-hover p-3 my-2">
       <thead class="table-primary">
@@ -14,7 +20,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of allProducts">
+        <tr *ngFor="let product of allProducts" appTooltip [tooltipData]="{ type: 'description', description: product.description}">
           <td>{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ product.category }}</td>
