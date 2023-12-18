@@ -14,6 +14,7 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
 import { CityDetailsComponent } from './cities/city-details/city-details.component';
 import { FormsModule } from '@angular/forms';
 import { TooltipDirective } from './directives/tooltip.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { TooltipDirective } from './directives/tooltip.directive';
     ProductDetailsComponent,
     UserDetailsComponent,
     CityDetailsComponent,
-    TooltipDirective
+    TooltipDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
