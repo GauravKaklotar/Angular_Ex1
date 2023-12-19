@@ -9,6 +9,8 @@ import { IUser } from '../interface/user';
 export class UsersComponent {
   allUsers!: IUser[];
   user!: IUser;
+  
+  users!:number;
 
   constructor(private userService: UserService){
     this.userService.getAllUsers().then((userList: IUser[]) => {
