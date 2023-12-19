@@ -7,12 +7,12 @@
             <th>#</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Age</th>
+            <th>Age <input type="number" class="mx-2" [(ngModel)] = "users" placeholder="Enter Age"></th>
             <th>Phone</th>
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody appHighlight [searchPrice] = "this.users">
           <tr *ngFor="let user of allUsers" appTooltip [tooltipData]="{type : 'address', address: user.address}">
             <td>{{ user.id }}</td>
             <td>{{ user.username }}</td>
