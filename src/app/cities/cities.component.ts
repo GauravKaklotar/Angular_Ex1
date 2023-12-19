@@ -9,6 +9,7 @@ import { ICity } from '../interface/city';
 export class CitiesComponent {
   allCity!: ICity[];
   city!: ICity;
+  Cities!:number;
   
   constructor(private cityService: CityService){
     this.cityService.getAllCities().then((cityList: ICity[]) => {
