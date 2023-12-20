@@ -54,6 +54,6 @@ export class TooltipDirective {
   }
 
   ngOnDestroy() {
-    this.hideTooltip(); // Ensure the tooltip is destroyed when the directive is destroyed
+    this.hideTooltip();
   }
 }
